@@ -49,6 +49,7 @@ const handleChange = (e) => {
       <Select
         placeholder="Select branch"
         isClearable={true}
+        name="branch"
         value={selected}
         options={categoryArray}
         onChange={handleChange}

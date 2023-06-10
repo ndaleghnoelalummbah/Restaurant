@@ -25,7 +25,7 @@ export default function Reserve() {
           <textarea type="text" name="notes" />
           <br />
           <button type="submit" className={styles.reservebtn}>
-            <Link to="/Payment" style={{ color: "#fff" }}>
+            <Link to="/Order" style={{ color: "#fff" }}>
               Reserve
             </Link>
           </button>

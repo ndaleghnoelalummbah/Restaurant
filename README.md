@@ -1,70 +1,58 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# TCHOP - Restaurant Food Ordering Application 
 
-## Available Scripts
+TCHOP is a food ordering application built using React for the frontend and PHP for the backend. The system utilizes a distributed database for different branches of the same restaurant. The React pages send data to the PHP APIs using Post requests via the PHP endpoint URLs and the PHP APIs send data to the frontend by returning JSON data using API endpoints.
+ ## Features 
 
-In the project directory, you can run:
+- The application allows users to browse the menu and place orders for food items from the restaurant.
+- Users can select items from the menu, customize their orders (normal delivery or reservation), and add them to their cart.
+- The system utilizes a distributed database to store menu items, orders, and user data for different branches of the same restaurant.
+- The React pages send data to the PHP APIs using Post requests via the PHP endpoint URLs.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    - React
+    - PHP
+    - MySQL
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+    1. Clone the repository: git clone https://github.com/your-username/tchop.git
+    2. Install the dependencies for the React frontend: cd tchop/frontend && npm install
+    3. Configure the backend by creating a config.php file in the backend directory with your MySQL database credentials:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+php:
 
-### `npm run build`
+<?php
+define('DB_HOST', 'localhost');
+define('DB_USER', 'your-db-user');
+define('DB_PASS', 'your-db-password');
+define('DB_NAME', 'tchop');
+?>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    4. Import the SQL schema for the database: mysql -u your-db-user -p tchop < tchop.sql
+    5. Start the React frontend: cd ../frontend && npm start
+    6. Start the PHP backend: cd ../backend && php -S localhost:8000
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    1. Open the application in your web browser at http://localhost:3000.
+    2. Browse the menu and add items to your cart.
+    3. Customize your order and proceed to checkout.
+    4. Enter your payment and delivery information.
+    5. Submit your order and wait for notification when your order is ready.
 
-### `npm run eject`
+## Contributing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Contributions to TCHOP are welcome! To contribute, follow these steps:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    1. Fork the repository.
+    2. Create a new branch for your feature or bug fix: git checkout -b my-new-feature
+    3. Implement your feature or bug fix and add tests if possible.
+    4. Commit your changes: git commit -am 'Add some feature'
+    5. Push to the branch: git push origin my-new-feature
+    6. Submit a pull request.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+TCHOP is licensed under the MIT License. See LICENSE for more information.

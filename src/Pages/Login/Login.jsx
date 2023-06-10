@@ -10,10 +10,10 @@ export default function Login() {
       <div className={styles.main}>
         <form onSubmit="">
           <label htmlFor="Email">Email:</label>
-          <input type="email" name="Email" />
+          <input type="email" name="email" />
           <br />
           <label htmlFor="Password">Password:</label>
-          <input type="password" name="Password" />
+          <input type="password" name="passwd" />
           <br />
           <span style={{ fontSize: "28px" }}>Not a member?</span>
          

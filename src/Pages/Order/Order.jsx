@@ -9,7 +9,7 @@ export default function Order() {
       <p class className={styles.text}>
         <u>MENUE</u>
       </p>
-      <div className="main">
+      {/* <div className="main">
         <form onSubmit="">
           <div className={styles.radio}>
             <input type="checkbox" name="payment" id="mtn" value="mtn" onChange={(e) => alert(e.target.value)} className={styles.radiobtn} />
@@ -35,7 +35,7 @@ export default function Order() {
             Make Payment
           </button>
         </form>
-      </div>
+      </div> */}
     </>
   );
 }
