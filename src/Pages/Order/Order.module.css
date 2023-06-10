@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+.main {
+  height: 84vh;
+  padding: 22px 0em;
+  font-size: 18px;
+  margin-top: -20px;
+  background-image: url("../../components/images/menu.png");
+  background-size: cover;
+  background-position: center;
+}
+form{
+    height: fit-content;
+    width: 300px;
+    display: block;
+    margin:2em auto;
+}
+.text {
+  font-weight: bolder;
+  font-size: 30px;
+  text-align: center;
+}

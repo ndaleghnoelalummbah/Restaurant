@@ -1,0 +1,24 @@
+nav{
+    display: flex;
+   /* justify-content: space-around; */
+    background-color: #DF2323;
+
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  margin-left: 52em;
+  justify-content: space-around;
+}
+.name{
+   color: #fff;
+   font-size: 42px;
+   margin: 26px -18px;
+}
+ul li{
+    color: #fff;
+   list-style: none;
+   font-size: 25px;
+   padding: 8px 66px;
+
+}
