@@ -90,7 +90,8 @@ export default function SignUp() {
         },
       })
       .then((response) => {
-        console.log(response.status, response.data);
+        console.log("status:", response.status, "response data:", response.data);
+        console.log("response");
         setSubmitted(true);
       })
       .catch((error) => {
@@ -102,7 +103,7 @@ export default function SignUp() {
 
     // onSubmitProps.setSubmitting(true);
     console.log("form data", values);
-    
+
     //onSubmitProps.setSubmitting(false);
     // alert(JSON.stringify(values, null, 8));
     setSubmitted(true);
@@ -117,7 +118,7 @@ export default function SignUp() {
     setPassType("password");
     setIsVissible((prev) => !prev);
   };
-  
+
   return (
     <>
       <SideMenu />
@@ -147,8 +148,7 @@ export default function SignUp() {
                   <hr />
                   <div className={styles.modalBtn}>
                     <button type="reset" className={styles.confirm} onClick={handleConfirm}>
-                      {/* <Link to="/">Confirm</Link> */}
-                      Confirm
+                      <Link to="/">Confirm</Link>
                     </button>
                     <button className={styles.close} type="button" onClick={handleEdit}>
                       Edit
