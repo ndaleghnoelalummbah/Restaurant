@@ -84,7 +84,11 @@ export default function SignUp() {
     });
 
     axios
-      .post("https://localhost/Chosen_APIs/register.php", initialValue)
+      .post("https://localhost/Chosen_APIs/register.php", values, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
       .then((response) => {
         console.log(response.status, response.data);
         setSubmitted(true);
@@ -98,7 +102,7 @@ export default function SignUp() {
 
     // onSubmitProps.setSubmitting(true);
     console.log("form data", values);
-    console.log("form input", initialValue);
+    
     //onSubmitProps.setSubmitting(false);
     // alert(JSON.stringify(values, null, 8));
     setSubmitted(true);
@@ -113,7 +117,7 @@ export default function SignUp() {
     setPassType("password");
     setIsVissible((prev) => !prev);
   };
-  console.log(initialValue.radioOption);
+  
   return (
     <>
       <SideMenu />
