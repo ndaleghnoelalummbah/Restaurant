@@ -91,7 +91,7 @@ export default function SignUp() {
       })
       .then((response) => {
         console.log("status:", response.status, "response data:", response.data);
-        console.log("response");
+        console.log("response", response);
         setSubmitted(true);
       })
       .catch((error) => {
